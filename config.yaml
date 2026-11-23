@@ -1,0 +1,108 @@
+# How often to look for new postings, and how far back a posting can be.
+interval: 2h
+lookback: 168h
+
+# Match score is explained in the README. 10 keeps generic Java/frontend roles out.
+min_score: 10
+
+# Caps so a bug cannot mail a large number of people.
+max_hr_emails_per_run: 8
+max_hr_emails_per_day: 20
+max_digest_jobs: 100
+max_detail_fetches: 80
+
+# Remote roles limited to the US, UK, EU, and similar are skipped.
+# Set true to keep every remote role regardless of country.
+accept_any_remote: false
+
+state_path: data/state.json
+outbox_dir: data/outbox
+
+user:
+  name: Deepak Kumar Mandal
+  email: deepakkumarmandal01092002@gmail.com
+  phone: "+91 9667009851"
+  linkedin: https://www.linkedin.com/in/deepak-kumar-mandal-583850252/
+  github: https://github.com/BUKIdrona
+  leetcode: https://leetcode.com/u/Deepakthegreat/
+  location: Gurugram, India
+  resume: "Deepak_kumar_mandal (7).pdf"
+
+smtp:
+  host: smtp.gmail.com
+  port: 587
+
+# Public career boards (Greenhouse / Lever / Ashby board tokens).
+# Add a company by pasting the token from its jobs URL.
+greenhouse:
+  - groww
+  - glance
+  - inmobi
+  - slice
+  - gitlab
+  - cockroachlabs
+  - planetscale
+  - discord
+  - twilio
+  - cloudflare
+  - datadog
+  - stripe
+  - figma
+  - vercel
+  - launchdarkly
+  - elastic
+  - mongodb
+  - coinbase
+  - dropbox
+  - asana
+  - intercom
+  - ripple
+  - wise
+  - duolingo
+  - monzo
+  - calendly
+  - mixpanel
+  - databricks
+  - okta
+  - reddit
+
+lever:
+  - cred
+  - meesho
+
+ashby:
+  - prefect
+
+remotive_queries:
+  - golang
+  - backend
+  - kubernetes
+  - c++
+
+jobicy_tags:
+  - golang
+  - backend
+  - devops
+  - software
+
+# Public Indeed RSS searches. A hiring email is kept only when the posting prints one.
+indeed:
+  - query: golang developer
+    location: India
+  - query: golang developer
+    location: Gurugram
+  - query: backend engineer
+    location: Bengaluru
+  - query: c++ developer
+    location: India
+
+# Public Naukri search. experience is years, matching about one year of backend work.
+naukri:
+  - keyword: golang developer
+    experience: 1
+  - keyword: backend developer
+    experience: 1
+  - keyword: software engineer golang
+    experience: 1
+  - keyword: c++ developer
+    experience: 1

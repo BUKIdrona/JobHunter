@@ -1,0 +1,14 @@
+[Unit]
+Description=Job hunter (Deepak Kumar Mandal)
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/amantya/Desktop/myself/jobhunter
+ExecStart=/home/amantya/Desktop/myself/jobhunter/bin/jobhunter
+Restart=on-failure
+RestartSec=30
+EnvironmentFile=-/home/amantya/Desktop/myself/jobhunter/.env
+
+[Install]
+WantedBy=default.target
